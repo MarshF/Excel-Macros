@@ -1,0 +1,47 @@
+Sub SR IMPORT()
+'
+'
+Application.Run "'ASAP Utilities.xla'!ASAPRunProc", 194 'Import multiple sheets
+Application.Run "'ASAP Utilities.xla'!ASAPRunProc", 32 'Reoder sheets to first posistion is first in line
+Dim x As Integer  'Select all sheeys
+    ThisWorkbook.Worksheets(3).Select
+    For x = 1 To ThisWorkbook.Worksheets.Count
+        Worksheets(x).Select (False)
+    Next x
+
+Application.Run "'ASAP Utilities.xla'!ASAPRunProc", 36 'Move all data into one sheet
+Application.Goto Reference:="R8032C1:R40000C54" 'Delete unessecary data
+Selection.ClearContents
+
+
+' Fill Headers with locations numbers
+   Range("A1").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "1.1"
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("J1").Select
+    ActiveCell.FormulaR1C1 = "2.1"
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "3"
+    Range("P1").Select
+    ActiveCell.FormulaR1C1 = "3.1"
+    Range("S1").Select
+    ActiveCell.FormulaR1C1 = "4"
+    Range("V1").Select
+    ActiveCell.FormulaR1C1 = "4.1"
+    Range("Y1").Select
+    ActiveCell.FormulaR1C1 = "5"
+    Range("AB1").Select
+    ActiveCell.FormulaR1C1 = "5.1"
+    Range("AE1").Select
+    ActiveCell.FormulaR1C1 = "6"
+    Range("AH1").Select
+    ActiveCell.FormulaR1C1 = "6.1"
+    Range("AK1").Select
+    ActiveCell.FormulaR1C1 = "7"
+    Range("AN1").Select
+    ActiveCell.FormulaR1C1 = "7.1"
+    Range("AQ2").Select
+End Sub
