@@ -1,4 +1,4 @@
-Sub Macro5()
+Sub SRimport()
 Application.Run "'ASAP Utilities.xla'!ASAPRunProc", 194 'Import multiple sheets
 
 Dim RunName As String
@@ -51,4 +51,3 @@ Selection.ClearContents
 ChDir "C:\Users\Marsh\Documents\Summer 2013\Surface Roughness\DI Tray 6.8.13 1m\"
 ActiveWorkbook.SaveAs Filename:=RunName
 End Sub
-
